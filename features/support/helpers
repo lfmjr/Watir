@@ -1,8 +1,0 @@
-"--module Helpers
-
-        def remove_customer(email)
-            client = Mongo::Client.new($mongo_uri)
-            client[:customers].delete_many({email: email})
-            client.close
-            sleep(5) #por conta da latencia do servidor da aplicação
-        end--"
